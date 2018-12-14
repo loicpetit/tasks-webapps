@@ -4,7 +4,7 @@ That repository is to tests différents UI & JS Frameworks to implements the sam
 
 # Docker
 
-Each project can be host in a Docker container using the Dockerfile.
+All web site are host in an nginx server. The docker file copy the source and ng conf. There are scripts to start/stop the container.
 
 # Sub projects
 
