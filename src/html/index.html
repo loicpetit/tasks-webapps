@@ -10,20 +10,18 @@
     <body>
         <!-- TOP BAR -->
         <header>
-            <button type="button" class="profil-btn" title="Profil">
+            <button type="button" class="header-profile-btn" title="Profil">
                 <span class="initials">LP</span>
             </button>
-            <span class="title">Task Web App - HTML</span>
+            <span class="header-title">Task Web App - HTML</span>
             <div class="buttons">
                 <div class="btn-grp">
-                    <span class="btn-grp-icon">Blanc</span>
-                    <button type="button"><span>..</span></button>
+                    <button type="button"><span>Blanc</span></button>
                     <div class="btn-grp-dropdown">
-                        <div class="active">Blanc</div>
                         <div>Noir</div>
                     </div>
                 </div>
-                <button type="button"><span>..</span></button>
+                <button type="button"><span>Config</span></button>
             </div>
         </header>
 
@@ -32,11 +30,48 @@
             <p>Nom : Petit</p>
             <p>Prénom : Loïc</p>
             <p>Fonction : Développeur</p>
+            <button type="button">Changer</button>
+            <button type="button">Déconnecter</button>
         </aside>
         
         <!-- CONTENT -->
         <section>
-                <p>Ma page d'accueil !</p>
+                <!-- TITRE -->
+                <h1>Tâches</h1>
+                <!-- FILTRES -->
+                <div class="task-filters">
+                    <div class="task-filter">
+                        <label>Equipes : </label>
+                        <select>
+                            <option>Toutes</option>
+                            <option>Equipe 1</option>
+                            <option>Equipe 2</option>
+                        </select>
+                    </div>
+                    <div class="task-filter">
+                        <label>Utilisateur : </label>
+                        <select>
+                            <option>Tous</option>
+                            <option>Moi</option>
+                            <option>John Doe</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- TACHES -->
+                <div class="tasks">
+                    <div class="task">
+                        <button type="button" class="btn btn-default task-btn">Modifier</button>
+                        <button type="button" class="btn btn-default task-btn">Supprimer</button>
+                        <div class="task-date">01/01/2001</div>
+                        <div class="task-title">Ma tâche 1</div>
+                    </div>
+                    <div class="task">
+                        <button type="button" class="btn btn-default task-btn">Modifier</button>
+                        <button type="button" class="btn btn-default task-btn">Supprimer</button>
+                        <div class="task-date">02/02/2002</div>
+                        <div class="task-title">Ma tâche 2</div>
+                    </div>
+                </div>
         </section>       
         
         <!-- FOOTER -->
