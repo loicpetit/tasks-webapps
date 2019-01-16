@@ -5,9 +5,11 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Task Web App - HTML</title>
         <link rel="stylesheet" type="text/css" href="styles/normalize.css">
-        <link rel="stylesheet" type="text/css" href="styles/app.css">
+        <link rel="stylesheet" type="text/css" href="styles/fontawesome/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="styles/theme.css">
+        <link rel="stylesheet" type="text/css" href="styles/layout.css">
     </head>
-    <body>
+    <body class="white-theme">
         <!-- TOP BAR -->
         <header>
             <button type="button" class="header-profile-btn" title="Profil">
@@ -16,12 +18,12 @@
             <span class="header-title">Task Web App - HTML</span>
             <div class="buttons">
                 <div class="btn-grp">
-                    <button type="button"><span>Blanc</span></button>
+                    <button id="theme-white-btn" type="button" class="icon-btn" title="Thème blanc"><i class="fas fa-circle theme-icon"></i></button>
                     <div class="btn-grp-dropdown">
-                        <div>Noir</div>
+                        <button id="theme-black-btn" type="button" class="icon-btn" title="Thème noir"><i class="fas fa-circle theme-icon"></i></button>
                     </div>
                 </div>
-                <button type="button"><span>Config</span></button>
+                <button type="button" class="icon-btn"><i class="fas fa-cog"></i></button>
             </div>
         </header>
 
@@ -30,8 +32,8 @@
             <p>Nom : Petit</p>
             <p>Prénom : Loïc</p>
             <p>Fonction : Développeur</p>
-            <button type="button">Changer</button>
-            <button type="button">Déconnecter</button>
+            <button type="button" class="btn btn-contrast">Changer</button>
+            <button type="button" class="btn btn-contrast">Déconnecter</button>
         </aside>
         
         <!-- CONTENT -->
@@ -60,17 +62,29 @@
                 <!-- TACHES -->
                 <div class="tasks">
                     <div class="task">
-                        <button type="button" class="btn btn-default task-btn">Modifier</button>
-                        <button type="button" class="btn btn-default task-btn">Supprimer</button>
+                        <button type="button" class="btn btn-default task-btn task-edit">Modifier</button>
+                        <button type="button" class="btn btn-default task-btn task-delete">Supprimer</button>
                         <div class="task-date">01/01/2001</div>
                         <div class="task-title">Ma tâche 1</div>
                     </div>
                     <div class="task">
-                        <button type="button" class="btn btn-default task-btn">Modifier</button>
-                        <button type="button" class="btn btn-default task-btn">Supprimer</button>
+                        <button type="button" class="btn btn-default task-btn task-edit">Modifier</button>
+                        <button type="button" class="btn btn-default task-btn task-delete">Supprimer</button>
                         <div class="task-date">02/02/2002</div>
                         <div class="task-title">Ma tâche 2</div>
                     </div>
+                </div>
+                <div class="task-pages">
+                    <div class="pagination">
+                        <button class="btn btn-default" data-page="1">&lt;</button>
+                        <button class="btn btn-default" data-page="1">1</button>
+                        <button class="btn btn-default disable active" data-page="2">2</button>
+                        <button class="btn btn-default" data-page="3">3</button>
+                        <button class="btn btn-default" data-page="3">&gt;</button>
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="btn btn-default task-add">Ajouter une tâche</button>
                 </div>
         </section>       
         

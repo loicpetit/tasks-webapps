@@ -1,0 +1,9 @@
+/* White theme */
+.white-theme {
+    --main-background: white;
+    --light-main-background: #CCC;
+    --main-color: black;
+    --contrast-background: black;
+    --light-contrast-background: #333;
+    --contrast-color: white;
+}
