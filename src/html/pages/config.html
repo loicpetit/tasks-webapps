@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task Web App - HTML</title>
+        <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
+        <link rel="stylesheet" type="text/css" href="/styles/fontawesome/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="/styles/theme.css">
+        <link rel="stylesheet" type="text/css" href="/styles/layout.css">
+    </head>
+    <body class="white-theme">
+        <!-- TOP BAR -->
+        <header>
+            <a href="/pages/profil-menu.html">
+                <button type="button" class="header-profile-btn" title="Profil">
+                    <span class="initials">LP</span>
+                </button>
+            </a>
+            <a href="/" class="header-title">Task Web App - HTML</a>
+            <div class="buttons">
+                <div class="btn-grp">
+                    <a href="/pages/choix-theme.html">
+                        <button id="theme-white-btn" type="button" class="btn-icon" title="Thème blanc"><i class="fas fa-circle theme-icon"></i></button>
+                    </a>                    
+                    <div class="btn-grp-dropdown">
+                        <button id="theme-black-btn" type="button" class="btn-icon" title="Thème noir"><i class="fas fa-circle theme-icon"></i></button>
+                    </div>
+                </div>
+                <a href="/pages/config.html">
+                    <button type="button" class="btn-icon"><i class="fas fa-cog"></i></button>
+                </a>
+            </div>
+        </header>
+
+        <!-- PROFIL -->
+        <aside class="profil">
+            <p>Nom : Petit</p>
+            <p>Prénom : Loïc</p>
+            <p>Fonction : Développeur</p>
+            <button type="button" class="btn btn-contrast">Changer</button>
+            <button type="button" class="btn btn-contrast">Déconnecter</button>
+        </aside>
+        
+        <!-- CONTENT -->
+        <section>
+                <!-- TITRE -->
+                <h1>Configuration</h1>
+        </section>       
+        
+        <!-- FOOTER -->
+        <footer>
+            <p>Loïc Petit on <a href="https://github.com/loicpetit/tasks-webapps" target="_blank">Github</a></p>
+        </footer>
+    </body>
+</html>

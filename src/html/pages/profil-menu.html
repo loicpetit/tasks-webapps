@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Task Web App - HTML</title>
+        <link rel="stylesheet" type="text/css" href="/styles/normalize.css">
+        <link rel="stylesheet" type="text/css" href="/styles/fontawesome/css/all.min.css">
+        <link rel="stylesheet" type="text/css" href="/styles/theme.css">
+        <link rel="stylesheet" type="text/css" href="/styles/layout.css">
+    </head>
+    <body class="white-theme">
+        <!-- TOP BAR -->
+        <header>
+            <a href="/pages/profil-menu.html">
+                <button type="button" class="header-profile-btn" title="Profil">
+                    <span class="initials">LP</span>
+                </button>
+            </a>
+            <a href="/" class="header-title">Task Web App - HTML</a>
+            <div class="buttons">
+                <div class="btn-grp">
+                    <a href="/pages/choix-theme.html">
+                        <button id="theme-white-btn" type="button" class="btn-icon" title="Thème blanc"><i class="fas fa-circle theme-icon"></i></button>
+                    </a>                    
+                    <div class="btn-grp-dropdown">
+                        <button id="theme-black-btn" type="button" class="btn-icon" title="Thème noir"><i class="fas fa-circle theme-icon"></i></button>
+                    </div>
+                </div>
+                <a href="/pages/config.html">
+                    <button type="button" class="btn-icon"><i class="fas fa-cog"></i></button>
+                </a>
+            </div>
+        </header>
+
+        <!-- PROFIL -->
+        <aside class="profil active">
+            <p>Nom : Petit</p>
+            <p>Prénom : Loïc</p>
+            <p>Fonction : Développeur</p>
+            <button type="button" class="btn btn-contrast">Changer</button>
+            <a href="/pages/connexion.html">
+                <button type="button" class="btn btn-contrast">Déconnecter</button>
+            </a>
+        </aside>
+        
+        <!-- CONTENT -->
+        <section>
+                <!-- TITRE -->
+                <h1>Tâches</h1>
+                <!-- FILTRES -->
+                <div class="task-filters">
+                    <div class="task-filter">
+                        <label>Equipes : </label>
+                        <select>
+                            <option>Toutes</option>
+                            <option>Equipe 1</option>
+                            <option>Equipe 2</option>
+                        </select>
+                    </div>
+                    <div class="task-filter">
+                        <label>Utilisateur : </label>
+                        <select>
+                            <option>Tous</option>
+                            <option>Moi</option>
+                            <option>John Doe</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- TACHES -->
+                <div class="tasks">
+                    <div class="task">
+                        <button type="button" class="btn btn-default task-btn task-edit">Modifier</button>
+                        <button type="button" class="btn btn-default task-btn task-delete">Supprimer</button>
+                        <div class="task-date">01/01/2001</div>
+                        <div class="task-title">Ma tâche 1</div>
+                    </div>
+                    <div class="task">
+                        <button type="button" class="btn btn-default task-btn task-edit">Modifier</button>
+                        <button type="button" class="btn btn-default task-btn task-delete">Supprimer</button>
+                        <div class="task-date">02/02/2002</div>
+                        <div class="task-title">Ma tâche 2</div>
+                    </div>
+                </div>
+                <div class="task-pages">
+                    <div class="pagination">
+                        <button class="btn btn-default" data-page="1">&lt;</button>
+                        <button class="btn btn-default" data-page="1">1</button>
+                        <button class="btn btn-default disable active" data-page="2">2</button>
+                        <button class="btn btn-default" data-page="3">3</button>
+                        <button class="btn btn-default" data-page="3">&gt;</button>
+                    </div>
+                </div>
+                <div>
+                    <a href="/pages/nouvelle-tache.html">
+                        <button type="button" class="btn btn-default task-add">Ajouter une tâche</button>
+                    </a>
+                </div>
+        </section>       
+        
+        <!-- FOOTER -->
+        <footer>
+            <p>Loïc Petit on <a href="https://github.com/loicpetit/tasks-webapps" target="_blank">Github</a></p>
+        </footer>
+    </body>
+</html>
