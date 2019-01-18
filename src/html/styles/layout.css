@@ -3,6 +3,7 @@
     font-family: "Roboto";
     src: url("/styles/Roboto-Regular.ttf");
 }
+html,
 body,
 button,
 input,
@@ -10,10 +11,20 @@ textarea,
 select {
     font-family: 'Roboto', sans-serif;
 }
+/* HTML */
+html {
+    height: 100%;
+    box-sizing: border-box;
+}
+
 
 /* Body */
 body {
+    position: relative;
     margin: 0;
+    padding-bottom: 5rem;
+    min-height: 100%;
+    box-sizing: border-box;
     font-size: 20px;
     background: var(--main-background);
     color: var(--main-color);
@@ -36,21 +47,17 @@ header {
     background: var(--contrast-background);
     color: var(--contrast-color);
     box-shadow: 0px 2px 5px rgba(var(--contrast-background-rbg) , 0.7);
+    display: flex;
     position: relative ;/* to use z-index */
     z-index: 100;
     height: 3rem;
+    text-align: center;
     line-height: 2.8rem;
     padding: 0 0.5rem;
     font-size: 1.1em;
 }
-header::after {
-    clear: both;
-}
 header .btn-icon {
     color: var(--contrast-color);
-}
-header .buttons {
-    float: right;
 }
 header .btn-grp {
     height: 1.5rem;
@@ -69,6 +76,7 @@ header .btn-grp {
 .header-title {
     color: var(--contrast-color);
     text-decoration: none;
+    flex: 1;
 }
 
 /* Aside */
@@ -90,7 +98,11 @@ section {
 
 /* Footer */
 footer {
-    margin-top: 1rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* margin-top: 1rem; */
     border-top: 0.1rem solid var(--light-main-background);
     text-align: center;
 }
@@ -244,7 +256,9 @@ h1 {
     color: var(--contrast-color);
     font-size: 1.7em;
 }
-
+.modal-footer {
+    text-align: center;
+}
 /* Form */
 form table {
     margin: auto;
@@ -252,7 +266,32 @@ form table {
 form table td {
     padding: 0.2rem;
 }
+form input {
+    width: 150px;
+}
+form .form-footer {
+    text-align: center;
+    margin: 0.5rem;
+}
 
+/* Login */
+section.login {
+    display: flex;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 0;
+    margin: 0;
+}
+section.login form {
+    margin: auto;
+}
+section.login .reset-password {
+    font-size: 0.6em;
+    margin: 0.5rem;
+}
 /* Util */
 .disable, .disable:hover {
     cursor: default;
