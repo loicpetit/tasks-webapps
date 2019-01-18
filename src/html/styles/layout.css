@@ -31,7 +31,7 @@ body {
 }
 
 /* Liens */
-a[href="/"],
+a[href="../"],
 a[href*="/pages/"] {
     text-decoration: none;
 }
