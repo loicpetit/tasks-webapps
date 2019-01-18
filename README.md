@@ -10,7 +10,7 @@ All web site are host in an nginx server. The docker file copy the source and ng
 
 ## Html
 
-The template for a simple task app using only HTML and CSS, no libraries.
+The ![template](https://loicpetit.github.io/tasks-webapps/src/html/index.html) for a simple task app using only HTML and CSS, no libraries.
 Use links to navigate through the functionnalities.
 
 ## HtmlBootstrap
