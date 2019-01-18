@@ -12,7 +12,8 @@
     --main-background: black;
     --light-main-background: #333;
     --main-color: white;
-    --contrast-background: white;
+    --contrast-background-rbg: 255, 255, 255;
+    --contrast-background: rgb(var(--contrast-background-rbg));
     --light-contrast-background: #CCC;
     --contrast-color: black;
 }

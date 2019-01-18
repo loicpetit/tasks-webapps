@@ -49,8 +49,8 @@
                 <!-- TITRE -->
                 <h1>Tâches</h1>
                 <!-- FILTRES -->
-                <div class="task-filters">
-                    <div class="task-filter">
+                <div class="filters">
+                    <div class="filter">
                         <label>Equipes : </label>
                         <select>
                             <option>Toutes</option>
@@ -58,7 +58,7 @@
                             <option>Equipe 2</option>
                         </select>
                     </div>
-                    <div class="task-filter">
+                    <div class="filter">
                         <label>Utilisateur : </label>
                         <select>
                             <option>Tous</option>
@@ -69,27 +69,25 @@
                 </div>
                 <!-- TACHES -->
                 <div class="tasks">
-                    <div class="task">
-                        <button type="button" class="btn btn-default task-btn task-edit">Modifier</button>
-                        <button type="button" class="btn btn-default task-btn task-delete">Supprimer</button>
+                    <div class="card task">
+                        <button type="button" class="btn btn-default card-btn task-edit">Modifier</button>
+                        <button type="button" class="btn btn-default card-btn task-delete">Supprimer</button>
                         <div class="task-date">01/01/2001</div>
                         <div class="task-title">Ma tâche 1</div>
                     </div>
-                    <div class="task">
-                        <button type="button" class="btn btn-default task-btn task-edit">Modifier</button>
-                        <button type="button" class="btn btn-default task-btn task-delete">Supprimer</button>
+                    <div class="card task">
+                        <button type="button" class="btn btn-default card-btn task-edit">Modifier</button>
+                        <button type="button" class="btn btn-default card-btn task-delete">Supprimer</button>
                         <div class="task-date">02/02/2002</div>
                         <div class="task-title">Ma tâche 2</div>
                     </div>
                 </div>
-                <div class="task-pages">
-                    <div class="pagination">
-                        <button class="btn btn-default" data-page="1">&lt;</button>
-                        <button class="btn btn-default" data-page="1">1</button>
-                        <button class="btn btn-default disable active" data-page="2">2</button>
-                        <button class="btn btn-default" data-page="3">3</button>
-                        <button class="btn btn-default" data-page="3">&gt;</button>
-                    </div>
+                <div class="pagination task-pages">
+                    <button class="btn btn-default" data-page="1">&lt;</button>
+                    <button class="btn btn-default" data-page="1">1</button>
+                    <button class="btn btn-default disable active" data-page="2">2</button>
+                    <button class="btn btn-default" data-page="3">3</button>
+                    <button class="btn btn-default" data-page="3">&gt;</button>
                 </div>
                 <div>
                     <a href="/pages/nouvelle-tache.html">
