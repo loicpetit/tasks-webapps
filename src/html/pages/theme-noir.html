@@ -1,19 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr-fr">
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="Description" content="Application de gestion de tâches">
         <title>Task Web App - HTML</title>
-        <link rel="stylesheet" type="text/css" href="../styles/normalize.css">
-        <link rel="stylesheet" type="text/css" href="../styles/fontawesome/css/all.min.css">
-        <link rel="stylesheet" type="text/css" href="../styles/theme.css">
-        <link rel="stylesheet" type="text/css" href="../styles/layout.css">
+        <link rel="preload" as="font" type="font/ttf" href="../styles/Roboto-Regular.ttf" crossorigin />
+        <link rel="preload" as="font" type="font/ttf" href="../styles/fontawesome/webfonts/fa-solid-900.woff2" crossorigin />
+        <link rel="stylesheet" type="text/css" href="../styles/normalize.min.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/fontawesome/css/fontawesome.custom.min.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/theme.min.css" />
+        <link rel="stylesheet" type="text/css" href="../styles/layout.min.css" />
     </head>
     <body class="black-theme">
         <!-- TOP BAR -->
         <header>
             <a href="../pages/profil-menu.html">
-                <button type="button" class="header-profile-btn" title="Profil">
+                <button type="button" class="header-profile-btn" title="Profil" aria-label="Profil">
                     <span class="initials">LP</span>
                 </button>
             </a>
@@ -21,14 +24,14 @@
             <div class="buttons">
                 <div class="btn-grp">
                     <a href="../pages/choix-theme.html">
-                        <button id="theme-black-btn" type="button" class="btn-icon" title="Thème blanc"><i class="fas fa-circle theme-icon"></i></button>
+                        <button id="theme-black-btn" type="button" class="btn-icon" title="Thème noir" aria-label="Thème noir"><i class="fas fa-circle theme-icon"></i></button>
                     </a>                    
                     <div class="btn-grp-dropdown">
-                        <button id="theme-white-btn" type="button" class="btn-icon" title="Thème noir"><i class="fas fa-circle theme-icon"></i></button>
+                        <button id="theme-white-btn" type="button" class="btn-icon" title="Thème blanc" aria-label="Thème blanc"><i class="fas fa-circle theme-icon"></i></button>
                     </div>
                 </div>
                 <a href="../pages/config.html">
-                    <button type="button" class="btn-icon"><i class="fas fa-cog"></i></button>
+                    <button type="button" class="btn-icon" title="Configuration" aria-label="Configuration"><i class="fas fa-cog"></i></button>
                 </a>
             </div>
         </header>
@@ -49,16 +52,16 @@
                 <!-- FILTRES -->
                 <div class="filters">
                     <div class="filter">
-                        <label>Equipes : </label>
-                        <select>
+                        <label for="task-team-filter">Equipes : </label>
+                        <select id="task-team-filter">
                             <option>Toutes</option>
                             <option>Equipe 1</option>
                             <option>Equipe 2</option>
                         </select>
                     </div>
                     <div class="filter">
-                        <label>Utilisateur : </label>
-                        <select>
+                        <label for="task-user-filter">Utilisateur : </label>
+                        <select id="task-user-filter">
                             <option>Tous</option>
                             <option>Moi</option>
                             <option>John Doe</option>
@@ -81,11 +84,11 @@
                     </div>
                 </div>
                 <div class="pagination task-pages">
-                    <button class="btn btn-default" data-page="1">&lt;</button>
-                    <button class="btn btn-default" data-page="1">1</button>
-                    <button class="btn btn-default disable active" data-page="2">2</button>
-                    <button class="btn btn-default" data-page="3">3</button>
-                    <button class="btn btn-default" data-page="3">&gt;</button>
+                    <button class="btn btn-default" data-page="1" aria-label="Page précédente">&lt;</button>
+                    <button class="btn btn-default" data-page="1" aria-label="Page 1">1</button>
+                    <button class="btn btn-default disable active" data-page="2" aria-label="Page 2">2</button>
+                    <button class="btn btn-default" data-page="3" aria-label="Page 3">3</button>
+                    <button class="btn btn-default" data-page="3" aria-label="Page suivante">&gt;</button>
                 </div>
                 <div>
                     <a href="../pages/nouvelle-tache.html">

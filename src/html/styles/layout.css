@@ -1,7 +1,9 @@
 /* Font */
 @font-face {
-    font-family: "Roboto";
-    src: url("/styles/Roboto-Regular.ttf");
+    font-family: "Roboto", sans-serif;
+    font-display: swap;
+    src: url("styles/Roboto-Regular.ttf");
+    src: url("../styles/Roboto-Regular.ttf");
 }
 html,
 body,
@@ -28,6 +30,12 @@ body {
     font-size: 20px;
     background: var(--main-background);
     color: var(--main-color);
+}
+
+/* Focus */
+:focus {
+    outline: 4px solid #888;
+    outline-offset: -2px;
 }
 
 /* Liens */
