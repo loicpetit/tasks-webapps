@@ -192,7 +192,15 @@ h1 {
 }
 
 /* Card */
+@media(min-width: 1000px){
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
 .card {
+    flex-basis: 45%;
     min-height: 2rem;
     margin: 0.5rem 0;
     padding: 0.5rem;
