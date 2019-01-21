@@ -13,12 +13,9 @@ All web site are host in an nginx server. The docker file copy the source and ng
 The [template](https://loicpetit.github.io/tasks-webapps/src/html/index.html) for a simple task app using only HTML and CSS, no libraries.
 Use links to navigate through the functionnalities.
 
-## HtmlBootstrap
 
-The template for a simple task app using only HTML and Bootstrap.
-Use links to navigate through the functionnalities.
+## Html + HTML generators
 
-## HtmlMaterial
+To avoid duplicate html codes, use a templating engine to generates the different pages of the HTML project.
+* [Handlebars](https://handlebarsjs.com/), see [site](https://loicpetit.github.io/tasks-webapps/src/html-handlebars/index.html)
 
-The template for a simple task app using only HTML and Material.
-Use links to navigate through the functionnalities.
