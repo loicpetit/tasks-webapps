@@ -17,5 +17,5 @@ Use links to navigate through the functionnalities.
 ## Html + HTML generators
 
 To avoid duplicate html codes, use a templating engine to generates the different pages of the HTML project.
-* [Handlebars](https://handlebarsjs.com/), see [site](https://loicpetit.github.io/tasks-webapps/src/html-handlebars/index.html)
+* [Handlebars](https://handlebarsjs.com/), see [site](https://loicpetit.github.io/tasks-webapps/src/html-handlebars/dist/index.html)
 
