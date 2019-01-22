@@ -1,6 +1,7 @@
 const fs = require('fs')
 const path = require('path')
 
+// Context bind to user options
 class Context {
     constructor(userOptions){
         if(!userOptions){
@@ -12,12 +13,14 @@ class Context {
         this.encoding = userOptions.encoding || 'utf-8'
     }
 
+    // log message if debug is true
     log(message){
         if(this.debug){
             console.log('gulp-data-json |', message)
         }
     }
 
+    // compute the json path from the file path
     computePath(filePath){
         //  TODO : implement src option
         //  TODO : implement relativeFrom option
@@ -32,6 +35,7 @@ class Context {
         return jsonPath
     }
 
+    // get the file content and return a promise
     getFile(path){
         return new Promise(function(resolve, reject){
             if(fs.existsSync(path)){
@@ -51,6 +55,7 @@ class Context {
     }
 }
 
+// create the gulp-data function from user options
 function jsonFactory(userOptions){
     const ctx = new Context(userOptions)
     ctx.log(`src | ${ctx.src}`)
@@ -73,7 +78,8 @@ function jsonFactory(userOptions){
             else{
                 const err = 'no file'
                 ctx.log(err)
-                reject(err)
+                // file not mandatory, so complete with empty data
+                resolve({})
             }
         })
     }
