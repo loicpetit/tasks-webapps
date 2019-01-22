@@ -2,14 +2,17 @@ const { src, dest, series, parallel, watch } = require('gulp')
 const del = require('del')
 const data = require('gulp-data')
 const jsondata = require('./scripts/gulp-data-json')
-const handlebars = require('gulp-compile-handlebars');
+const handlebars = require('gulp-compile-handlebars')
+const sass = require('gulp-sass')
+
+sass.compiler = require('node-sass')
 
 function hello(){
     console.log('Hello gulp !')
     return Promise.resolve()
 }
 
-function cleanCompile(){
+function clearCompile(){
     return del(['dist/**/*.html'])
 }
 
@@ -24,10 +27,34 @@ function compile(){
 }
 
 function watchCompile(){
-    watch(['src/pages/*.html', 'src/pages/*.json'], series(cleanCompile, compile))
+    watch(['src/pages/*.html', 'src/pages/*.json'], series(clearCompile, compile))
 }
 
-exports.cleanCompile = cleanCompile
+function clearSass(){
+    return del(['dist/**/*.css'])
+}
+
+function compileSass(){
+    return src(['src/styles/*.scss', '!src/styles/all.scss'])
+            .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
+            .pipe(dest('dist/styles'))
+}
+
+function compileAllSass(){
+    return src(['src/styles/all.scss'])
+            .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+            .pipe(dest('dist/styles'))
+}
+
+function watchSass(){
+    watch(['src/styles/*.scss', 'src/styles/*.css'], series(clearSass, compileSass, compileAllSass))
+}
+
+exports.clearCompile = clearCompile
 exports.compile = compile
 exports.watchCompile = watchCompile
+exports.clearSass = clearSass
+exports.compileSass = series(clearSass, compileSass, compileAllSass)
+exports.watchSass = watchSass
+exports.watchAll = parallel(watchCompile, watchSass)
 exports.default = hello

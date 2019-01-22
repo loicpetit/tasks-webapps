@@ -1,0 +1,7 @@
+.class1 {
+  display: none;
+}
+
+.class1 .class2 {
+  display: block;
+}
