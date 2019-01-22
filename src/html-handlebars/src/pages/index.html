@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr-fr">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="Description" content="Application de gestion de tâches">
-        <title>{{title}}</title>
-    </head>
+    {{> head }}
     <body>
         <div>
             Generate with Handlebars
         </div>
+        {{#if debug}}
+        <div>debug !!!</div>
+        {{/if}}
         {{> header }}
         {{> header author="LPT bis" }}
     </body>

@@ -1,7 +1,0 @@
-{
-    "title": "Task Web App - HTML - Handlebars",
-    "test": {
-        "arr": ["one", "two"],
-        "other": 123
-    }
-}

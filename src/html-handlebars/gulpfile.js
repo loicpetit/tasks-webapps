@@ -17,12 +17,16 @@ function clearCompile(){
 }
 
 function compile(){
+    const globalData = {
+        debug: false,
+        title: "Task Web App - HTML - Handlebars"
+    }
     const options = {
         batch: ['src/partials']
     }
     return src('src/pages/*.html')
             .pipe(data(jsondata()))
-            .pipe(handlebars(null, options))
+            .pipe(handlebars(globalData, options))
             .pipe(dest('dist'))
 }
 
@@ -35,7 +39,7 @@ function clearSass(){
 }
 
 function compileSass(){
-    return src(['src/styles/*.scss', '!src/styles/all.scss'])
+    return src(['src/styles/*.scss', '!src/styles/all.scss', 'src/styles/**/*.css'])
             .pipe(sass({outputStyle: 'expanded'}).on('error', sass.logError))
             .pipe(dest('dist/styles'))
 }
