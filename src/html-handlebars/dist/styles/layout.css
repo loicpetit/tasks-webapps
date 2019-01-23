@@ -2,8 +2,7 @@
 @font-face {
   font-family: "Roboto", sans-serif;
   font-display: swap;
-  src: url("styles/Roboto-Regular.ttf");
-  src: url("../styles/Roboto-Regular.ttf");
+  src: url("Roboto-Regular.ttf");
 }
 
 html,

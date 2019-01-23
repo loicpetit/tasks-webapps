@@ -1,4 +1,28 @@
+<!-- TOP BAR -->
 <header>
-    <h1>TASKS !!!</h1>
-    <div>{{author}}</div>
+    {{#unless login }}
+    <a href="profil-menu.html">
+        <button type="button" class="header-profile-btn" title="Profil" aria-label="Profil">
+            <span class="initials">LP</span>
+        </button>
+    </a>
+    {{/unless}}
+    <a href="index.html" class="header-title">{{ title }}</a>
+    {{#unless login }}
+    <div class="buttons">
+        <div class="btn-grp">
+            <a href="choix-theme.html">
+                <button id="theme-white-btn" type="button" class="btn-icon" title="Thème blanc" aria-label="Thème blanc"><i class="fas fa-circle theme-icon"></i></button>
+            </a>                    
+            <div class="btn-grp-dropdown {{#if themeDropdown}}active{{/if}}">
+                <a href="theme-noir.html">
+                    <button id="theme-black-btn" type="button" class="btn-icon" title="Thème noir" aria-label="Thème noir"><i class="fas fa-circle theme-icon"></i></button>
+                </a>
+            </div>
+        </div>
+        <a href="config.html">
+            <button type="button" class="btn-icon" title="Configuration" aria-label="Configuration"><i class="fas fa-cog"></i></button>
+        </a>
+    </div>
+    {{/unless}}
 </header>
