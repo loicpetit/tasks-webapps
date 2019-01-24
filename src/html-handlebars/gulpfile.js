@@ -31,7 +31,7 @@ function compile(){
 }
 
 function watchCompile(){
-    watch(['src/pages/*.html', 'src/pages/*.json'], series(clearCompile, compile))
+    watch(['src/pages/*.html', 'src/partials/*.html', 'src/pages/*.json'], series(clearCompile, compile))
 }
 
 function clearSass(){
