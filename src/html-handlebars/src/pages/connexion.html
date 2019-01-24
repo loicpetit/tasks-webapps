@@ -4,6 +4,32 @@
     <body class="white-theme">
         {{> header login=true }}
 
+        <!-- CONTENT -->
+        <section class="login">
+            <form>
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><label for="login">Login</label></td>
+                            <td><input type="text" id="login" name="login"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="password">Mot de passe</label></td>
+                            <td><input type="password" id="passwor" name="password"></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="form-footer">
+                    <a href="../">
+                        <button type="button" class="btn btn-default connect">Connexion</button>
+                    </a>                    
+                    <div class="reset-password">
+                        <a href="../">Récupération du mot de passe</a>
+                    </div>
+                </div>
+            </form>
+        </section>
+        
         {{> footer }}
     </body>
 </html>
