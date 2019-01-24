@@ -55,7 +55,7 @@ function watchSass(){
 }
 
 exports.clearCompile = clearCompile
-exports.compile = compile
+exports.compile = series(clearCompile, compile)
 exports.watchCompile = watchCompile
 exports.clearSass = clearSass
 exports.compileSass = series(clearSass, compileSass, compileAllSass)
