@@ -46,6 +46,64 @@
             </a>
         </aside>
 
+        <!-- CONTENT -->
+        <section>
+            <!-- TITRE -->
+            <h1>Tâches</h1>
+            <!-- FILTRES -->
+            <div class="filters">
+                <div class="filter">
+                    <label for="task-team-filter">Equipes : </label>
+                    <select id="task-team-filter">
+                        <option>Toutes</option>
+                        <option>Equipe 1</option>
+                        <option>Equipe 2</option>
+                    </select>
+                </div>
+                <div class="filter">
+                    <label for="task-user-filter">Utilisateur : </label>
+                    <select id="task-user-filter">
+                        <option>Tous</option>
+                        <option>Moi</option>
+                        <option>John Doe</option>
+                    </select>
+                </div>
+            </div>
+            <!-- TACHES -->
+            <div class="cards tasks">
+                <div class="card task">
+                        <button type="button" class="btn btn-default card-btn task-edit">Modifier</button>
+                        <button type="button" class="btn btn-default card-btn task-delete">Supprimer</button>
+                        <div class="task-date">01/01/2001</div>
+                        <div class="task-title">Ma tâche 1</div>
+                    </div>
+                <div class="card task">
+                        <button type="button" class="btn btn-default card-btn task-edit">Modifier</button>
+                        <button type="button" class="btn btn-default card-btn task-delete">Supprimer</button>
+                        <div class="task-date">02/02/2001</div>
+                        <div class="task-title">Ma tâche 2</div>
+                    </div>
+                <div class="card task">
+                        <button type="button" class="btn btn-default card-btn task-edit">Modifier</button>
+                        <button type="button" class="btn btn-default card-btn task-delete">Supprimer</button>
+                        <div class="task-date">03/03/2002</div>
+                        <div class="task-title">Ma tâche 3</div>
+                    </div>
+            </div>
+            <div class="pagination task-pages">
+                <button class="btn btn-default" data-page="1" aria-label="Page précédente">&lt;</button>
+                <button class="btn btn-default" data-page="1" aria-label="Page 1">1</button>
+                <button class="btn btn-default disable active" data-page="2" aria-label="Page 2">2</button>
+                <button class="btn btn-default" data-page="3" aria-label="Page 3">3</button>
+                <button class="btn btn-default" data-page="3" aria-label="Page suivante">&gt;</button>
+            </div>
+            <div>
+                <a href="nouvelle-tache.html">
+                    <button type="button" class="btn btn-default task-add">Ajouter une tâche</button>
+                </a>
+            </div>
+        </section>       
+
         <!-- FOOTER -->
         <footer>
             <p>Loïc Petit on <a href="https://github.com/loicpetit/tasks-webapps" target="_blank" rel="noreferrer">Github</a></p>
