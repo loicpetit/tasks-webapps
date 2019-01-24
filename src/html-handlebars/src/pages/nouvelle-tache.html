@@ -8,6 +8,35 @@
 
         {{> taches data=taches }}
 
+        <!-- MODAL -->
+        <div class="modal active">
+            <div class="modal-content">
+                    <div class="modal-header">Ajouter une tâche</div>
+                    <div class="modal-body">
+                        <form>
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td><label for="add-task-title">Titre</label></td>
+                                        <td><input type="text" name="title" id="add-task-title"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><label for="add-task-date">Date de fin</label></td>
+                                        <td><input type="date" name="date" id="add-task-date"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="../">
+                            <button type="button" class="btn btn-default cancel">Annuler</button>
+                        </a>
+                        <button type="button" class="btn btn-default add">Ajouter</button>
+                    </div>
+            </div>
+        </div>
+
         {{> footer }}
     </body>
 </html>
