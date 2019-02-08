@@ -1,7 +1,7 @@
 const { src, dest, series, parallel, watch } = require('gulp')
 const del = require('del')
 const data = require('gulp-data')
-const jsondata = require('./scripts/gulp-data-json')
+const jsondata = require('@loicpetitdev/gulp-data-json')
 const handlebars = require('gulp-compile-handlebars')
 const sass = require('gulp-sass')
 
