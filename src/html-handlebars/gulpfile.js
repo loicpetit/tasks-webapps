@@ -4,6 +4,7 @@ const data = require('gulp-data')
 const jsondata = require('@loicpetitdev/gulp-data-json')
 const handlebars = require('gulp-compile-handlebars')
 const sass = require('gulp-sass')
+const browserSync = require('browser-sync').create()
 
 sass.compiler = require('node-sass')
 
@@ -54,6 +55,16 @@ function watchSass(){
     watch(['src/styles/*.scss', 'src/styles/*.css'], series(clearSass, compileSass, compileAllSass))
 }
 
+function serve(){
+    // comme on reagit a la regeneration sass, les fichiers sont supprimés puis recréés, d'où le watch event add
+    // on ne rajoute pas le stream browserSync volontairement pour avoir une tâche indépendante qui ne surveille que le dossier dist
+    browserSync.init({
+        server: './dist',
+        watch: true,
+        watchEvents: ['add', 'change']
+    })
+}
+
 exports.clearCompile = clearCompile
 exports.compile = series(clearCompile, compile)
 exports.watchCompile = watchCompile
@@ -61,4 +72,5 @@ exports.clearSass = clearSass
 exports.compileSass = series(clearSass, compileSass, compileAllSass)
 exports.watchSass = watchSass
 exports.watchAll = parallel(watchCompile, watchSass)
+exports.serve = parallel(exports.watchAll, serve)
 exports.default = hello
