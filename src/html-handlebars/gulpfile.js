@@ -65,6 +65,16 @@ function serve(){
     })
 }
 
+function proxy(){
+    // comme on reagit a la regeneration sass, les fichiers sont supprimés puis recréés, d'où le watch event add
+    // proxy la web application dans docker en localhost
+    browserSync.init({
+        proxy: 'handlebars.task.webapps:4000',
+        files: './dist/**/*',
+        watchEvents: ['add', 'change']
+    })
+}
+
 exports.clearCompile = clearCompile
 exports.compile = series(clearCompile, compile)
 exports.watchCompile = watchCompile
@@ -73,4 +83,5 @@ exports.compileSass = series(clearSass, compileSass, compileAllSass)
 exports.watchSass = watchSass
 exports.watchAll = parallel(watchCompile, watchSass)
 exports.serve = parallel(exports.watchAll, serve)
+exports.proxy = parallel(exports.watchAll, proxy)
 exports.default = hello
